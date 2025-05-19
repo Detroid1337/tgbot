@@ -41,7 +41,7 @@
             margin: 15px 0;
         }
 
-        #buy {
+        .buy-button {
             background-color: var(--tg-theme-button-color);
             color: var(--tg-theme-button-text-color);
             border: none;
@@ -50,15 +50,15 @@
             font-size: 16px;
             font-weight: 500;
             cursor: pointer;
-            transition: opacity 0.2s ease;
-            margin-top: 20px;
+            width: 100%;
+            margin-top: 10px;
         }
 
-        #buy:hover {
+        .buy-button:hover {
             opacity: 0.8;
         }
 
-        #buy:active {
+        .buy-button:active {
             opacity: 0.6;
         }
 
@@ -115,26 +115,14 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/6594/6594483.png" alt="Product 1">
                 <h3>Product 1</h3>
                 <p>$19.99</p>
-                <button id="buy1" onclick="showForm('form1')">Buy Now</button>
-                <form id="form1" class="order-form">
-                    <input type="text" placeholder="Enter your name" required>
-                    <input type="email" placeholder="Enter your email" required>
-                    <input type="text" placeholder="Enter your phone number" required>
-                    <button type="submit">Order Now</button>
-                </form>
+                <button class="buy-button">Buy Now</button>
             </div>
             
             <div class="product-card">
                 <img src="https://cdn-icons-png.flaticon.com/512/93/93091.png" alt="Product 2">
                 <h3>Product 2</h3>
                 <p>$29.99</p>
-                <button id="buy2" onclick="showForm('form2')">Buy Now</button>
-                <form id="form2" class="order-form">
-                    <input type="text" placeholder="Enter your name" required>
-                    <input type="email" placeholder="Enter your email" required>
-                    <input type="text" placeholder="Enter your phone number" required>
-                    <button type="submit">Order Now</button>
-                </form>
+                <button class="buy-button">Buy Now</button>
             </div>
         </div>
     </div>
@@ -142,12 +130,6 @@
     <script>
         let tg = window.Telegram.WebApp;
         tg.expand();
-        tg.MainButton.textColor = '#FFFFFF';
-        tg.MainButton.color = '#2481cc';
-
-        function showForm(formId) {
-            document.getElementById(formId).style.display = 'block';
-        }
     </script>
 </body>
 </html>
