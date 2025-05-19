@@ -46,47 +46,45 @@
             margin: 15px 0;
         }
 
-        .buy  {
-            background-color: var(--tg-theme-button-color);
-            color: var(--tg-theme-button-text-color);
-            border: none;
+        /* Button styles based on Telegram Mini App guidelines */
+        button {
+            appearance: none;
+            background-color: var(--tg-theme-button-color, #2481cc);
+            color: var(--tg-theme-button-text-color, #ffffff);
+            border: 0;
             border-radius: 8px;
-            padding: 12px 24px;
-            font-size: 16px;
+            padding: 10px 20px;
+            font-size: 14px;
             font-weight: 500;
+            inline-size: 100%;
             cursor: pointer;
-            width: 100%;
-            margin-top: 10px;
+            transition: opacity 0.2s ease;
         }
 
-        .buy:hover {
+        button:hover {
             opacity: 0.8;
         }
 
-        .buy:active {
+        button:active {
             opacity: 0.6;
         }
 
-       
-
-       
-
-        .order-form {
-            display: none;
-            margin-top: 15px;
+        /* Input fields styling */
+        input {
+            appearance: none;
+            background: var(--tg-theme-secondary-bg-color, #f4f4f5);
+            color: var(--tg-theme-text-color, #000000);
+            border: 1px solid var(--tg-theme-hint-color, #999999);
+            border-radius: 8px;
+            padding: 12px;
+            inline-size: 100%;
+            margin-bottom: 10px;
+            font-size: 14px;
         }
 
-        .order-form input {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
-            border: 1px solid var(--tg-theme-hint-color);
-            border-radius: 6px;
-        }
-
-        .order-form {
-            width: 100%;
-            margin-top: 10px;
+        input:focus {
+            outline: none;
+            border-color: var(--tg-theme-button-color, #2481cc);
         }
     </style>
 </head>
